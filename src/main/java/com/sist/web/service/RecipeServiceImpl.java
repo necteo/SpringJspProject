@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.sist.web.mapper.RecipeMapper;
+import com.sist.web.vo.RecipeDetailVO;
 import com.sist.web.vo.RecipeVO;
 
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,12 @@ public class RecipeServiceImpl implements RecipeService {
 	@Override
 	public int recipeTotalPage() {
 		return mapper.recipeTotalPage();
+	}
+
+	@Override
+	public RecipeDetailVO recipeDetailData(int no) {
+		mapper.recipeHitIncrement(no);
+		return mapper.recipeDetailData(no);
 	}
 
 }

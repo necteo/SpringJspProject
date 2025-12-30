@@ -36,7 +36,7 @@ import lombok.Data;
 	------
 	카프카
 	------
-	JSP
+	Spring Data
  */
 @Data
 public class RecipeDetailVO {
